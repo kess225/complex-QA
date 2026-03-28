@@ -1,0 +1,31 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+	"faiss-cpu",
+	"fastapi",
+	"httpx",
+	"langchain-core",
+	"langchain-ollama",
+	"numpy",
+	"pillow",
+	"pytest",
+	"rank-bm25",
+	"python-dotenv",
+	"sentence-transformers",
+	"streamlit",
+	"tiktoken",
+	"uvicorn",
+	"pyyaml",
+	"langchain-groq",
+	"groq",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/test"]
+markers = [
+	"integration: marks tests that require live external services",
+]
